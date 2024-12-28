@@ -16,8 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'ripp634@gmail.com'; // Email Anda
-        $mail->Password = 'kjzglgsnujktsujt'; // App Password Gmail Anda
+        $mail->Username = 'ripp634@gmail.com'; 
+        $mail->Password = 'kjzglgsnujktsujt';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
@@ -33,10 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->send();
 
-        // Kirim respons sukses ke AJAX
         echo "Email berhasil terkirim!";
     } catch (Exception $e) {
-        // Kirim respons error ke AJAX
         echo "Gagal mengirim email: {$mail->ErrorInfo}";
     }
 } else {
