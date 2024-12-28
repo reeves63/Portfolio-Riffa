@@ -98,7 +98,6 @@ const formBtn = document.querySelector("[data-form-btn]");
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
-    // check form validation
     if (form.checkValidity()) {
       formBtn.removeAttribute("disabled");
     } else {
@@ -132,7 +131,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll('[data-target]');
   const modals = document.querySelectorAll(".modal");
 
-  // Fungsi untuk membuka modal
   function openModal(targetId) {
     const modal = document.getElementById(targetId);
     if (modal) {
@@ -140,12 +138,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Fungsi untuk menutup modal
   function closeModal(modal) {
     modal.style.display = "none";
   }
 
-  // Tambahkan event listener untuk link yang memicu modal
   links.forEach(link => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
@@ -154,13 +150,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Tambahkan event listener untuk tombol close pada modal
   modals.forEach(modal => {
     modal.querySelector(".modal-close-btn").addEventListener("click", function () {
       closeModal(modal);
     });
 
-    // Tutup modal jika overlay diklik
     modal.querySelector(".modal-overlay").addEventListener("click", function () {
       closeModal(modal);
     });
