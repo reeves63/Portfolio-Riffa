@@ -882,6 +882,14 @@ main {
   font-weight: var(--fw-300);
 }
 
+.certificate-link {
+  color: white;
+  text-decoration: none;
+}
+
+.certificate-link:hover {
+  text-decoration: underline;
+}
 
 
 /*-----------------------------------*\
