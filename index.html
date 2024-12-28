@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexipoint - Virtual Membership App</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/images/r_logo.png" type="image/x-icon">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <!-- SIDEBAR -->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/profpic.JPG" alt="Riffa Putra" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Riffa Putra">Riffa Putra</h1>
+          <p class="title">Programmer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:ripp634@gmail.com" class="contact-link">ripp634@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+6281805875522" class="contact-link">+6281805875522</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+              <time datetime="2004-03-06">March 06, 2004</time>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Kota Tangerang, Banten, Indonesia</address>
+            </div>
+          </li>
+        </ul>
+
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://www.instagram.com/rf.ptrrr" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://github.com/reeves63" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/riffa-putra-7b33a5329/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>About</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+        </ul>
+      </nav>
+
+
+    <!-- ABOUT SECTION -->
+    <article class="about active" data-page="about">
+      <!-- SECTION HEADER -->
+      <header>
+        <h2 class="h2 article-title">About me</h2>
+      </header>
+
+      <!-- ABOUT TEXT -->
+      <section class="about-text">
+        <p>
+          I am an Informatics student at Universitas Multimedia Nusantara with experience in front-end development,
+          specializing in HTML, CSS, JavaScript, and React JS. I have a strong interest in back-end development, Android
+          application development, and data processing. My adaptability and enthusiasm for learning new technologies drive
+          me to contribute effectively to diverse projects. I am eager to further develop my skills and gain professional
+          experience through a meaningful internship opportunity.
+        </p>
+        <a href="https://drive.google.com/file/d/1uDrc_KaCwI0pmJl5uzUkJKBFReZk4U60/view?usp=drive_link" class="download-cv-btn" download>
+          <ion-icon name="cloud-download-outline"></ion-icon>
+          Download CV
+        </a>
+      </section>
+
+
+      <!-- SERVICES -->
+      <section class="service">
+        <h3 class="h3 service-title">What I'm Doing</h3>
+
+        <ul class="service-list">
+          <li class="service-item">
+            <div class="service-icon-box">
+              <img src="./assets/images/icon-dev.svg" alt="Design icon" width="40">
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Web Development</h4>
+              <p class="service-item-text">
+                Crafting interactive and responsive websites that bring ideas to life, one line of code at a time.
+              </p>
+            </div>
+          </li>
+
+          <li class="service-item">
+            <div class="service-icon-box">
+              <img src="./assets/images/icon-design.svg" alt="Web development icon" width="40">
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Learning New Technologies</h4>
+              <p class="service-item-text">
+                Diving into back-end, Android, and data processing to grow and innovate.
+              </p>
+            </div>
+          </li>
+
+          <li class="service-item">
+            <div class="service-icon-box">
+              <img src="./assets/images/icon-app.svg" alt="Mobile app icon" width="40">
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Android Development</h4>
+              <p class="service-item-text">
+                Developing and learning intuitive and efficient mobile applications.
+              </p>
+            </div>
+          </li>
+
+          <li class="service-item">
+            <div class="service-icon-box">
+              <img src="./assets/images/icon-design.svg" alt="Camera icon" width="40">
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Problem-Solving</h4>
+              <p class="service-item-text">
+                Finding creative solutions and designing user-friendly interfaces for real-world challenges.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- TESTIMONIALS MODAL -->
+      <div class="modal-container" data-modal-container>
+        <!-- OVERLAY -->
+        <div class="overlay" data-overlay></div>
+
+        <!-- MODAL CONTENT -->
+        <section class="testimonials-modal">
+          <!-- CLOSE BUTTON -->
+          <button class="modal-close-btn" data-modal-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <!-- MODAL IMAGE -->
+          <div class="modal-img-wrapper">
+            <figure class="modal-avatar-box">
+              <img src="./assets/images/avatar-1.png" alt="Daniel Lewis" width="80" data-modal-img>
+            </figure>
+            <img src="./assets/images/icon-quote.svg" alt="Quote icon">
+          </div>
+
+          <!-- MODAL TEXT CONTENT -->
+          <div class="modal-content">
+            <h4 class="h3 modal-title" data-modal-title>Daniel Lewis</h4>
+            <time datetime="2021-06-14">14 June, 2021</time>
+            <div data-modal-text>
+              <p>
+                <!-- Placeholder for modal content -->
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+
+
+
+    <!-- RESUME SECTION -->
+    <article class="resume" data-page="resume">
+      <header>
+        <h2 class="h2 article-title">Resume</h2>
+      </header>
+
+      <!-- EDUCATION TIMELINE -->
+      <section class="timeline">
+        <div class="title-wrapper">
+          <div class="icon-box">
+            <ion-icon name="book-outline"></ion-icon>
+          </div>
+          <h3 class="h3">Education</h3>
+        </div>
+
+        <ol class="timeline-list">
+          <!-- EDUCATION ITEM -->
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Universitas Multimedia Nusantara</h4>
+            <span>2022 - 2026</span>
+            <p class="timeline-text">
+              Informatics Student
+            </p>
+          </li>
+
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">SMAIT Asy-Syukriyyah</h4>
+            <span>2019 - 2022</span>
+            <p class="timeline-text">
+              Science Major
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- PROJECTS TIMELINE -->
+      <section class="timeline">
+        <div class="title-wrapper">
+          <div class="icon-box">
+            <ion-icon name="book-outline"></ion-icon>
+          </div>
+          <h3 class="h3">Projects Experience</h3>
+        </div>
+
+        <ol class="timeline-list">
+          <!-- PROJECT ITEM 1 -->
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Swimming Competition Registration Website</h4>
+            <span>July 2024 - September 2024</span>
+            <p class="timeline-text">
+              Designed and developed a user-friendly website for national swimming competition registration. Focused on front-end
+              development using HTML, CSS, and JavaScript to create a responsive interface, ensuring easy access and usability for all
+              participants. The platform was built on the Laravel framework.
+            </p>
+          </li>
+
+          <!-- PROJECT ITEM 2 -->
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">GBI NLC Church Website</h4>
+            <span>September 2023 - December 2023</span>
+            <p class="timeline-text">
+              Contributed as a Front-End Developer in building the official website for GBI NLC, which provides detailed information
+              about the church. The website was developed using PHP, Laravel, JavaScript, Tailwind CSS, and MySQL, focusing on
+              delivering a responsive and user-friendly interface.
+            </p>
+          </li>
+
+          <!-- PROJECT ITEM 3 -->
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Virtual Membership App</h4>
+            <span>September 2024 - December 2024</span>
+            <p class="timeline-text">
+              Developed an Android application aimed at creating virtual memberships, enabling store owners to establish membership
+              programs cost-effectively. The platform allows customers to join store memberships seamlessly through the app.
+              Worked as a Full-Stack Developer, utilizing Kotlin for application development and Firebase for backend services.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- SKILLS SECTION -->
+      <section class="skills-section">
+        <header>
+          <h3 class="h3 skills-title">My Skills</h3>
+        </header>
+
+        <div class="skills-grid">
+          <!-- SKILL ITEM 1 -->
+          <div class="skill-item">
+            <div class="skill-icon-box">
+              <ion-icon name="code-slash-outline"></ion-icon>
+            </div>
+            <div class="skill-content">
+              <h4 class="skill-title">HTML + CSS</h4>
+              <p>Expertise in creating responsive and visually appealing web designs.</p>
+            </div>
+          </div>
+
+          <!-- SKILL ITEM 2 -->
+          <div class="skill-item">
+            <div class="skill-icon-box">
+              <ion-icon name="logo-javascript"></ion-icon>
+            </div>
+            <div class="skill-content">
+              <h4 class="skill-title">JavaScript</h4>
+              <p>Proficient in front-end scripting and building dynamic web applications.</p>
+            </div>
+          </div>
+
+          <!-- SKILL ITEM 3 -->
+          <div class="skill-item">
+            <div class="skill-icon-box">
+              <ion-icon name="code-slash-outline"></ion-icon>
+            </div>
+            <div class="skill-content">
+              <h4 class="skill-title">PHP</h4>
+              <p>Experienced in server-side scripting and backend development.</p>
+            </div>
+          </div>
+
+          <!-- SKILL ITEM 4 -->
+          <div class="skill-item">
+            <div class="skill-icon-box">
+              <ion-icon name="logo-python"></ion-icon>
+            </div>
+            <div class="skill-content">
+              <h4 class="skill-title">Python</h4>
+              <p>Skilled in Python for data analysis, scripting, and automation.</p>
+            </div>
+          </div>
+
+          <!-- SKILL ITEM 5 -->
+          <div class="skill-item">
+            <div class="skill-icon-box">
+              <ion-icon name="server-outline"></ion-icon>
+            </div>
+            <div class="skill-content">
+              <h4 class="skill-title">MySQL</h4>
+              <p>Capable of designing and managing relational databases efficiently.</p>
+            </div>
+          </div>
+
+          <!-- SKILL ITEM 6 -->
+          <div class="skill-item">
+            <div class="skill-icon-box">
+              <ion-icon name="logo-android"></ion-icon>
+            </div>
+            <div class="skill-content">
+              <h4 class="skill-title">Kotlin</h4>
+              <p>Experienced in developing Android applications with Kotlin.</p>
+            </div>
+          </div>
+
+          <!-- SKILL ITEM 7 -->
+          <div class="skill-item">
+            <div class="skill-icon-box">
+              <ion-icon name="construct-outline"></ion-icon>
+            </div>
+            <div class="skill-content">
+              <h4 class="skill-title">Laravel PHP Framework</h4>
+              <p>Proficient in building robust web applications using Laravel.</p>
+            </div>
+          </div>
+
+          <!-- SKILL ITEM 8 -->
+          <div class="skill-item">
+            <div class="skill-icon-box">
+              <ion-icon name="logo-react"></ion-icon>
+            </div>
+            <div class="skill-content">
+              <h4 class="skill-title">React JS Framework</h4>
+              <p>Specialized in building modern user interfaces with React.</p>
+            </div>
+          </div>
+
+          <!-- SKILL ITEM 9 -->
+          <div class="skill-item">
+            <div class="skill-icon-box">
+              <ion-icon name="color-palette-outline"></ion-icon>
+            </div>
+            <div class="skill-content">
+              <h4 class="skill-title">Tailwind CSS</h4>
+              <p>Experienced in using Tailwind CSS for efficient styling.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATES SECTION -->
+      <section class="certificates-section">
+        <header>
+          <h3 class="h3 certificates-title">My Certificates</h3>
+        </header>
+
+        <div class="certificates-grid">
+          <!-- CERTIFICATE ITEM 1 -->
+          <div class="certificate-item">
+            <div class="certificate-icon-box">
+              <ion-icon name="ribbon-outline"></ion-icon>
+            </div>
+            <div class="certificate-content">
+              <h4 class="certificate-title">HCIA-AI V3.5 Course</h4>
+              <p>Issued by Huawei Technologies</p>
+              <time datetime="2024-04">April 2024</time>
+            </div>
+          </div>
+
+          <!-- CERTIFICATE ITEM 2 -->
+          <div class="certificate-item">
+            <div class="certificate-icon-box">
+              <ion-icon name="ribbon-outline"></ion-icon>
+            </div>
+            <div class="certificate-content">
+              <h4 class="certificate-title">Python Intermediate</h4>
+              <p>Issued by Sololearn</p>
+              <time datetime="2023-05">May 2023</time>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <!-- PORTFOLIO SECTION -->
+    <article class="portfolio" data-page="portfolio">
+      <header>
+        <h2 class="h2 article-title">Portfolio</h2>
+      </header>
+
+      <!-- PROJECTS SECTION -->
+      <section class="projects">
+        <!-- FILTER LIST -->
+        <ul class="filter-list">
+          <li class="filter-item">
+            <button class="active" data-filter-btn>All</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Website</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Applications</button>
+          </li>
+        </ul>
+
+        <!-- FILTER SELECT BOX -->
+        <div class="filter-select-box">
+          <button class="filter-select" data-select>
+            <div class="select-value" data-selecct-value>Select category</div>
+            <div class="select-icon">
+              <ion-icon name="chevron-down"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="select-list">
+            <li class="select-item">
+              <button data-select-item>All</button>
+            </li>
+            <li class="select-item">
+              <button data-select-item>Website</button>
+            </li>
+            <li class="select-item">
+              <button data-select-item>Applications</button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- PROJECT LIST -->
+        <ul class="project-list">
+          <!-- PROJECT ITEM 1 -->
+          <li class="project-item active" data-filter-item data-category="website">
+            <a href="https://tirtabentengcomp.com/">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+                <img src="./assets/images/swimcomp.png" alt="Swimming Competition Registration Website" loading="lazy">
+              </figure>
+              <h3 class="project-title">Swimming Competition Registration Website</h3>
+              <p class="project-category">Website</p>
+            </a>
+          </li>
+
+          <!-- PROJECT ITEM 2 -->
+          <li class="project-item active" data-filter-item data-category="website">
+            <a href="https://github.com/Mikokito/UAS-Webpro">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+                <img src="./assets/images/church.png" alt="GBI NLC Church Website" loading="lazy">
+              </figure>
+              <h3 class="project-title">GBI NLC Church Website</h3>
+              <p class="project-category">Website</p>
+            </a>
+          </li>
+
+          <!-- PROJECT ITEM 3 -->
+          <li class="project-item active" data-filter-item data-category="applications">
+            <a href="flexipoint-details.html">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+                <img src="./assets/images/Flexipoint.png" alt="Flexipoint - Virtual Membership App" loading="lazy">
+              </figure>
+              <h3 class="project-title">Flexipoint - Virtual Membership App</h3>
+              <p class="project-category">Applications</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </article>
+
+
+
+    <!-- CONTACT SECTION -->
+    <article class="contact" data-page="contact">
+      <!-- SECTION HEADER -->
+      <header>
+        <h2 class="h2 article-title">Contact</h2>
+      </header>
+
+      <!-- MAP SECTION -->
+      <section class="mapbox" data-mapbox>
+        <figure>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82390.77923511813!2d106.60883442463505!3d-6.176600631303847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f8e853d2e38d%3A0x301576d14feb9c0!2sTangerang%2C%20Kota%20Tangerang%2C%20Banten!5e1!3m2!1sid!2sid!4v1735146710480!5m2!1sid!2sid"
+            width="400" 
+            height="300" 
+            loading="lazy" 
+            allowfullscreen 
+            aria-hidden="false" 
+            tabindex="0">
+          </iframe>
+        </figure>
+      </section>
+
+      <!-- CONTACT FORM SECTION -->
+      <section class="contact-form">
+        <h3 class="h3 form-title">Contact Form</h3>
+
+        <!-- CONTACT FORM -->
+        <form action="send-email.php" method="post" class="form" id="contactForm">
+          <!-- INPUT WRAPPER -->
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              name="fullname" 
+              class="form-input" 
+              placeholder="Full name" 
+              required 
+            >
+            <input 
+              type="email" 
+              name="email" 
+              class="form-input" 
+              placeholder="Email address" 
+              required 
+            >
+          </div>
+
+          <!-- MESSAGE TEXTAREA -->
+          <textarea 
+            name="message" 
+            class="form-input" 
+            placeholder="Your Message" 
+            required>
+          </textarea>
+
+          <!-- SUBMIT BUTTON -->
+          <button class="form-btn" type="submit">
+            <ion-icon name="paper-plane"></ion-icon>
+            <span>Send Message</span>
+          </button>
+        </form>
+      </section>
+    </article>
+
+    </div>
+  </main>
+
+  <!-- Custom JavaScript -->
+  <script src="./assets/js/script.js"></script>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData
+        });
+
+        const result = await response.text();
+
+        alert(result);
+
+        form.reset();
+      } catch (error) {
+        alert('Failed to send the message. Please try again.');
+      }
+    });
+  </script>
+
+  <!-- Ionicons Integration -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
