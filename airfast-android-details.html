@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flexipoint - Virtual Membership App</title>
+  <title>AirfastAMS App (Android) - Gallery</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="./assets/images/r_logo.png" type="image/x-icon">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/gallery.css">
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -112,46 +113,679 @@
       </nav>
 
       <!-- Project Details -->
-      <article class="portfolio flexipoint-page" data-page="portfolio">
+      <article class="portfolio app-screenshots active" data-page="portfolio">
         <header>
           <h2 class="h2 article-title">AirfastAMS App (Android)</h2>
         </header>
 
         <section class="about-text">
           <p>
-            Flexipoint is a virtual membership application aimed at helping businesses establish membership programs easily
-            and cost-effectively. This project was developed using Kotlin for the Android application and Firebase for the
-            backend services. Below are some screenshots of the application.
+            The internal employee application of PT. AIRFAST Indonesia, developed using Kotlin, features location-based attendance, helpdesk, digital signature, announcements, and notifications. The app is also integrated with a backend API, WebView, and quick links to other applications, with a focus on providing a responsive user experience and ensuring data security.
           </p>
         </section>
 
-        <section class="projects">
-          <header>
-            <h2 class="h2 article-title">Gallery</h2>
-          </header>
-          <ul class="project-list flexipoint-gallery">
-
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (1).jpg" alt="Homepage" loading="lazy">
-                </figure>
-                <figcaption>Home</figcaption>
-              </div>
-            </li>
-            
-          </ul>
+        <!-- Play Store Section -->
+        <section class="play-store-section">
+          <a href="https://play.google.com/store/apps/details?id=com.airfastindonesia.android.ams&pcampaignid=web_share" target="_blank" class="play-store-btn">
+            <div class="icon">
+              <ion-icon name="logo-google-playstore"></ion-icon>
+            </div>
+            <div class="text">
+              <span class="small-text">GET IT ON</span>
+              <span class="big-text">Google Play</span>
+            </div>
+          </a>
         </section>
+
+
+        <!-- Filter Section -->
+          <section class="gallery-filter">
+            <div class="filter-wrapper">
+              <button class="filter-btn active" data-filter="all">All Screens</button>
+              <button class="filter-btn" data-filter="auth">Authentication</button>
+              <button class="filter-btn" data-filter="home">Home</button>
+              <button class="filter-btn" data-filter="attendance">Attendance</button>
+              <button class="filter-btn" data-filter="profile">Profile</button>
+              <button class="filter-btn" data-filter="helpdesk">Helpdesk</button>
+              <button class="filter-btn" data-filter="notification">Notifications</button>
+              <button class="filter-btn" data-filter="document">Sign Document</button>
+              <button class="filter-btn" data-filter="announcement">Announcements</button>
+              <button class="filter-btn" data-filter="others">Others</button>
+            </div>
+          </section>
+
+          <!-- Gallery Section -->
+          <section class="screenshot-gallery">
+            <div class="gallery-grid">
+              <!-- Screenshot 1 -->
+              <div class="gallery-item" data-category="others">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (1).png" alt="Splash Screen" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Splash Screen</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (1).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Splash Screen</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 2 -->
+              <div class="gallery-item" data-category="auth">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (2).png" alt="Login Screen" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Login Screen</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (2).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Login Screen</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 3 -->
+              <div class="gallery-item" data-category="home">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (3).png" alt="Homepage" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Homepage</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (3).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Homepage</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 4 -->
+              <div class="gallery-item" data-category="attendance">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (4).png" alt="Attendance Type" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Attendance Type</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (4).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Check In Attendance</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 5 -->
+              <div class="gallery-item" data-category="attendance">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (5).png" alt="Special Occasion Attendance" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Special Occasion Attendance</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (5).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Check In Attendance</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 6 -->
+              <div class="gallery-item" data-category="attendance">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (6).png" alt="Check In Successful" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Check In Successful</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (6).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Homepage</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 7 -->
+              <div class="gallery-item" data-category="home">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (7).png" alt="Bottom Sheet App" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Bottom Sheet App</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (7).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Bottom Sheet App</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 8 -->
+              <div class="gallery-item" data-category="notification">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (8).png" alt="Notification Page" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Notification Page</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (8).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Notification Page</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 9 -->
+              <div class="gallery-item" data-category="notification">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (9).png" alt="Notification Detail" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Notification Detail</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (9).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Notification Detail</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 10 -->
+              <div class="gallery-item" data-category="profile">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (10).png" alt="Profile Page" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Profile Page</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (10).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Profile Page</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 11 -->
+              <div class="gallery-item" data-category="profile">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (11).png" alt="Profile Information" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Profile Information</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (11).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Profile Information</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 12 -->
+              <div class="gallery-item" data-category="attendance">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (12).png" alt="Attendance Page" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Attendance Page</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (12).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Attendance Page</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 13 -->
+              <div class="gallery-item" data-category="helpdesk">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (13).png" alt="Helpdesk Page" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Helpdesk Page</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (13).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Helpdesk Page</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 14 -->
+              <div class="gallery-item" data-category="helpdesk">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (14).png" alt="Helpdesk Request" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Helpdesk Request</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (14).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Helpdesk Request</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 15 -->
+              <div class="gallery-item" data-category="helpdesk">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (15).png" alt="Open Ticket" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Open Status in Helpdesk</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (15).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Open Ticket</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 16 -->
+              <div class="gallery-item" data-category="helpdesk">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (16).png" alt="Ticket Detail" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Ticket Detail</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (16).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Ticket Detail</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 17 -->
+              <div class="gallery-item" data-category="helpdesk">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (17).png" alt="On Progress Ticket" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>On Progress Ticket Detail</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (17).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">On Progress Ticket </h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 18 -->
+              <div class="gallery-item" data-category="helpdesk">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (18).png" alt="Finish Ticket" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Finish Ticket Dialog</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (18).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Finish Ticket</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 19 -->
+              <div class="gallery-item" data-category="helpdesk">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (19).png" alt="Closed Ticket" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Closed Ticket</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (19).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Closed Ticket</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 20 -->
+              <div class="gallery-item" data-category="helpdesk">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (20).png" alt="Closed Ticket Detail" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Closed Ticket Detail</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (20).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Closed Ticket Detail</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 21 -->
+              <div class="gallery-item" data-category="document">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (21).png" alt="Sign Document Page" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Sign Document Page</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (21).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Sign Document Page</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 22 -->
+              <div class="gallery-item" data-category="document">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (22).png" alt="Sign Document Detail" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Sign Document Detail</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (22).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Sign Document Detail</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 23 -->
+              <div class="gallery-item" data-category="document">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (23).png" alt="Signing Document" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Signing Document</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (23).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Signing Document</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 24 -->
+              <div class="gallery-item" data-category="announcement">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (24).png" alt="Announcement Page" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Announcement Page</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (24).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Announcement Page</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 25 -->
+              <div class="gallery-item" data-category="announcement">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (25).png" alt="Announcement Detail" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Announcement Detail</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (25).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Announcement Detail</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 26 -->
+              <div class="gallery-item" data-category="others">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (26).png" alt="Aircraft Reports" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Aircraft Reports</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (26).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Aircraft Reports</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot 27 -->
+              <div class="gallery-item" data-category="others">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Airfast Android (27).png" alt="Technical Log" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Technical Log</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Airfast Android (27).png">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Technical Log</h4>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
       </article>
     </div>
   </main>
 
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal">
+    <div class="lightbox-content">
+      <div class="lightbox-close">
+        <ion-icon name="close-outline"></ion-icon>
+      </div>
+      <div class="lightbox-img-wrapper">
+        <img src="" alt="Screenshot Full View">
+      </div>
+      <div class="lightbox-caption">
+      </div>
+      <div class="lightbox-controls">
+        <button class="lightbox-prev">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </button>
+        <button class="lightbox-next">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Custom JS -->
   <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/gallery.js"></script>
 
   <!-- Ionicons -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
+
 </html>

@@ -5,18 +5,95 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flexipoint - Virtual Membership App</title>
+  <title>AirfastAMS App (iOS) - Gallery</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="./assets/images/r_logo.png" type="image/x-icon">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/gallery.css">
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Custom CSS for In Progress page */
+    .in-progress-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 50vh;
+      padding: 30px;
+      background: var(--eerie-black-1);
+      border-radius: 20px;
+      margin-top: 30px;
+      box-shadow: var(--shadow-2);
+    }
+    
+    .progress-icon {
+      font-size: 80px;
+      color: var(--orange-yellow-crayola);
+      margin-bottom: 20px;
+      animation: pulse 2s infinite ease-in-out;
+    }
+    
+    .progress-title {
+      color: var(--orange-yellow-crayola);
+      font-size: 28px;
+      font-weight: var(--fw-600);
+      margin-bottom: 15px;
+    }
+    
+    .progress-description {
+      color: var(--light-gray);
+      font-size: var(--fs-6);
+      line-height: 1.6;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+    
+    .progress-bar {
+      width: 80%;
+      max-width: 500px;
+      height: 10px;
+      background: var(--jet);
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .progress-fill {
+      position: absolute;
+      height: 100%;
+      width: 75%; /* Adjusted to show project is 35% complete */
+      background: linear-gradient(to right, var(--orange-yellow-crayola), var(--bittersweet-shimmer));
+      border-radius: 10px;
+      animation: progress 2s ease-in-out;
+    }
+    
+    .coming-soon {
+      margin-top: 25px;
+      color: var(--white-2);
+      font-size: var(--fs-5);
+      font-weight: var(--fw-500);
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    
+    @keyframes progress {
+      from { width: 0; }
+      to { width: 75%; }
+    }
+  </style>
 </head>
 
 <body>
@@ -112,36 +189,33 @@
       </nav>
 
       <!-- Project Details -->
-      <article class="portfolio flexipoint-page" data-page="portfolio">
+      <article class="portfolio app-screenshots active" data-page="portfolio">
         <header>
           <h2 class="h2 article-title">AirfastAMS App (iOS)</h2>
         </header>
 
         <section class="about-text">
           <p>
-            Flexipoint is a virtual membership application aimed at helping businesses establish membership programs easily
-            and cost-effectively. This project was developed using Kotlin for the Android application and Firebase for the
-            backend services. Below are some screenshots of the application.
+            This project is currently under development. Check back soon for updates as the project nears completion.
           </p>
         </section>
 
-        <section class="projects">
-          <header>
-            <h2 class="h2 article-title">Gallery</h2>
-          </header>
-          <ul class="project-list flexipoint-gallery">
-
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (1).jpg" alt="Homepage" loading="lazy">
-                </figure>
-                <figcaption>Home</figcaption>
-              </div>
-            </li>
-
-            
-          </ul>
+        <!-- In Progress Section -->
+        <section class="in-progress-container">
+          <div class="progress-icon">
+            <ion-icon name="construct-outline"></ion-icon>
+          </div>
+          <h3 class="progress-title">Development In Progress</h3>
+          <p class="progress-description">
+            I'm currently working hard on this exciting new project. The development is underway, and I'm making good progress.
+            This page will be updated with screenshots, details, and features as soon as they're ready to showcase.
+          </p>
+          
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          
+          <p class="coming-soon">Coming Soon</p>
         </section>
       </article>
     </div>
@@ -153,6 +227,6 @@
   <!-- Ionicons -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
+
 </html>

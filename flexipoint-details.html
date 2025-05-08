@@ -12,6 +12,7 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/gallery.css">
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -112,7 +113,7 @@
       </nav>
 
       <!-- Project Details -->
-      <article class="portfolio flexipoint-page" data-page="portfolio">
+      <article class="portfolio app-screenshots active" data-page="portfolio">
         <header>
           <h2 class="h2 article-title">Flexipoint - Virtual Membership App</h2>
         </header>
@@ -125,168 +126,410 @@
           </p>
         </section>
 
-        <section class="projects">
-          <header>
-            <h2 class="h2 article-title">Gallery</h2>
-          </header>
-          <ul class="project-list flexipoint-gallery">
+        <!-- Filter Section -->
+        <section class="gallery-filter">
+          <div class="filter-wrapper">
+            <button class="filter-btn active" data-filter="all">All Screens</button>
+            <button class="filter-btn" data-filter="auth">Authentication</button>
+            <button class="filter-btn" data-filter="home">Home</button>
+            <button class="filter-btn" data-filter="qr">QR</button>
+            <button class="filter-btn" data-filter="annoucement">Annoucement</button>
+            <button class="filter-btn" data-filter="profile">Profile</button>
+            <button class="filter-btn" data-filter="membership">Membership</button>
+            <button class="filter-btn" data-filter="shop">Shop Management</button>
+          </div>
+        </section>
 
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (1).jpg" alt="Homepage" loading="lazy">
-                </figure>
-                <figcaption>Home</figcaption>
+        <!-- Gallery Section -->
+          <section class="screenshot-gallery">
+            <div class="gallery-grid">
+              <!-- Screenshot 1 -->
+              <div class="gallery-item" data-category="home">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Flexipoint (1).jpg" alt="Homepage" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Homepage</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Flexipoint (1).jpg">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Homepage</h4>
+                  </div>
+                </div>
               </div>
-            </li>
 
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (2).jpg" alt="QR" loading="lazy">
-                </figure>
-                <figcaption>QR</figcaption>
+              <!-- Screenshot 2 -->
+              <div class="gallery-item" data-category="qr">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Flexipoint (2).jpg" alt="QR Page" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>QR Page</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Flexipoint (2).jpg">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">QR Page</h4>
+                  </div>
+                </div>
               </div>
-            </li>
 
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (3).jpg" alt="Message" loading="lazy">
-                </figure>
-                <figcaption>Message</figcaption>
+              <!-- Screenshot 3 -->
+              <div class="gallery-item" data-category="annoucement">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Flexipoint (3).jpg" alt="Announcement Page" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Announcement Page</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Flexipoint (3).jpg">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Announcement Page</h4>
+                  </div>
+                </div>
               </div>
-            </li>
 
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (5).jpg" alt="Profile" loading="lazy">
-                </figure>
-                <figcaption>Profile</figcaption>
+              <!-- Screenshot 4 -->
+              <div class="gallery-item" data-category="profile">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Flexipoint (4).jpg" alt="Profile Page" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Profile Page</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Flexipoint (4).jpg">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Profile Page</h4>
+                  </div>
+                </div>
               </div>
-            </li>
 
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (4).jpg" alt="Profile Edit" loading="lazy">
-                </figure>
-                <figcaption>Profile Edit</figcaption>
+              <!-- Screenshot 5 -->
+              <div class="gallery-item" data-category="profile">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Flexipoint (5).jpg" alt="Edit Profile" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Edit Profile</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Flexipoint (5).jpg">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Edit Profile</h4>
+                  </div>
+                </div>
               </div>
-            </li>
 
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (15).jpg" alt="Login" loading="lazy">
-                </figure>
-                <figcaption>Login</figcaption>
+              <!-- Screenshot 6 -->
+              <div class="gallery-item" data-category="membership">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Flexipoint (6).jpg" alt="Membership List" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Membership List</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Flexipoint (6).jpg">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Membership List</h4>
+                  </div>
+                </div>
               </div>
-            </li>
 
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (6).jpg" alt="Membership" loading="lazy">
-                </figure>
-                <figcaption>Membership List</figcaption>
+              <!-- Screenshot 15 -->
+              <div class="gallery-item" data-category="membership">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Flexipoint (15).jpg" alt="Membership Detail" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Membership Detail (User POV)</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Flexipoint (15).jpg">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Membership Detail</h4>
+                  </div>
+                </div>
               </div>
-            </li>
 
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (16).jpg" alt="Membership Detail" loading="lazy">
-                </figure>
-                <figcaption>Membership Detail</figcaption>
+              <!-- Screenshot 7 -->
+              <div class="gallery-item" data-category="shop">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Flexipoint (7).jpg" alt="Register Shop" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Register Shop</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Flexipoint (7).jpg">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Register Shop</h4>
+                  </div>
+                </div>
               </div>
-            </li>
 
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (7).jpg" alt="Register Shop" loading="lazy">
-                </figure>
-                <figcaption>Register Shop</figcaption>
+              <!-- Screenshot 8 -->
+              <div class="gallery-item" data-category="shop">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Flexipoint (8).jpg" alt="My Shop List" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>My Shop List</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Flexipoint (8).jpg">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">My Shop List</h4>
+                  </div>
+                </div>
               </div>
-            </li>
 
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (8).jpg" alt="My Shops List" loading="lazy">
-                </figure>
-                <figcaption>My Shops List</figcaption>
+              <!-- Screenshot 9 -->
+              <div class="gallery-item" data-category="shop">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Flexipoint (9).jpg" alt="Shop Detail" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Shop Detail</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Flexipoint (9).jpg">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Shop Detail</h4>
+                  </div>
+                </div>
               </div>
-            </li>
 
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (9).jpg" alt="Shop Detail" loading="lazy">
-                </figure>
-                <figcaption>Shop Detail</figcaption>
+              <!-- Screenshot 10 -->
+              <div class="gallery-item" data-category="shop">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Flexipoint (10).jpg" alt="Edit Shop Profile" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Edit Shop Profile</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Flexipoint (10).jpg">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Edit Shop Profile</h4>
+                  </div>
+                </div>
               </div>
-            </li>
 
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (10).jpg" alt="Edit Shop Detail" loading="lazy">
-                </figure>
-                <figcaption>Edit Shop Detail</figcaption>
+              <!-- Screenshot 11 -->
+              <div class="gallery-item" data-category="shop">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Flexipoint (11).jpg" alt="Annoucement Shop" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Annoucement from your Shop</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Flexipoint (11).jpg">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Annoucement Shop</h4>
+                  </div>
+                </div>
               </div>
-            </li>
 
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (11).jpg" alt="Announcements" loading="lazy">
-                </figure>
-                <figcaption>Create Announcements</figcaption>
+              <!-- Screenshot 12 -->
+              <div class="gallery-item" data-category="shop">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Flexipoint (12).jpg" alt="Scan QR Page" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Scan QR Page</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Flexipoint (12).jpg">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Scan QR Page</h4>
+                  </div>
+                </div>
               </div>
-            </li>
 
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (12).jpg" alt="Scan QR Code" loading="lazy">
-                </figure>
-                <figcaption>Scan QR Code</figcaption>
+              <!-- Screenshot 13 -->
+              <div class="gallery-item" data-category="shop">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Flexipoint (13).jpg" alt="Scanning QR" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Scanning QR</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Flexipoint (13).jpg">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Scanning QR</h4>
+                  </div>
+                </div>
               </div>
-            </li>
 
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (13).jpg" alt="Scanning" loading="lazy">
-                </figure>
-                <figcaption>Scanning</figcaption>
+              <!-- Screenshot 14 -->
+              <div class="gallery-item" data-category="shop">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Flexipoint (14).jpg" alt="Input Point" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Input Point</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Flexipoint (14).jpg">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Input Point</h4>
+                  </div>
+                </div>
               </div>
-            </li>
 
-            <li class="project-item">
-              <div class="project-img-wrapper">
-                <figure class="mobile-img">
-                  <img src="./assets/images/Flexipoint (14).jpg" alt="Manage Membership Points" loading="lazy">
-                </figure>
-                <figcaption>Manage Membership Points</figcaption>
+              <!-- Screenshot 16 -->
+              <div class="gallery-item" data-category="auth">
+                <div class="gallery-item-inner">
+                  <div class="screenshot-wrapper">
+                    <img src="./assets/images/Flexipoint (16).jpg" alt="Login Screen" loading="lazy">
+                    <div class="screenshot-overlay">
+                      <div class="overlay-content">
+                        <h3>Login Screen</h3>
+                      </div>
+                      <div class="overlay-actions">
+                        <button class="action-btn zoom-btn" data-src="./assets/images/Flexipoint (16).jpg">
+                          <ion-icon name="expand-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screenshot-info">
+                    <h4 class="screenshot-title">Login Screen</h4>
+                  </div>
+                </div>
               </div>
-            </li>
-            
-          </ul>
+
+          </div>
         </section>
       </article>
     </div>
   </main>
 
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal">
+    <div class="lightbox-content">
+      <div class="lightbox-close">
+        <ion-icon name="close-outline"></ion-icon>
+      </div>
+      <div class="lightbox-img-wrapper">
+        <img src="" alt="Screenshot Full View">
+      </div>
+      <div class="lightbox-caption">
+      </div>
+      <div class="lightbox-controls">
+        <button class="lightbox-prev">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </button>
+        <button class="lightbox-next">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Custom JS -->
   <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/gallery.js"></script>
 
   <!-- Ionicons -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
+
 </html>

@@ -1,0 +1,568 @@
+/* Gallery Filter */
+.gallery-filter {
+  margin-bottom: 25px;
+}
+
+.filter-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.filter-btn {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: var(--eerie-black-1);
+  border: 1px solid var(--jet);
+  transition: var(--transition-1);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  color: var(--orange-yellow-crayola);
+  background: var(--bg-gradient-jet);
+  box-shadow: var(--shadow-1);
+}
+
+/* Gallery Grid - Responsif dengan layout yang disesuaikan */
+.gallery-grid {
+  display: grid;
+  /* Sesuai permintaan: 4 kolom untuk desktop */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+  transition: height 0.3s ease-out; /* Transisi smooth saat tinggi grid berubah */
+  min-height: 200px; /* Pastikan grid selalu memiliki tinggi minimum */
+}
+
+.gallery-item {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform-origin: center;
+  display: none;
+  will-change: opacity, transform; 
+}
+
+.gallery-item.show {
+  opacity: 1;
+  transform: scale(1);
+  display: block;
+}
+
+.gallery-item-inner {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--eerie-black-1);
+  box-shadow: var(--shadow-2);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform; /* Berikan petunjuk ke browser untuk optimasi */
+}
+
+/* Screenshot Wrapper - dengan aspect ratio 9:16 (tetap seperti asli) */
+.screenshot-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  /* Mempertahankan aspect ratio 9:16 */
+  aspect-ratio: 9 / 16;
+  backface-visibility: hidden; /* Menghindari flickering */
+  -webkit-backface-visibility: hidden;
+}
+
+.screenshot-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item-inner:hover .screenshot-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Screenshot Overlay - Dimodifikasi agar tidak menutupi gambar dengan bayangan abu-abu */
+.screenshot-overlay {
+  position: absolute;
+  inset: 0;
+  background: transparent; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item-inner:hover .screenshot-overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+  background: rgba(29, 29, 33, 0.7); 
+  border-radius: 8px;
+  padding: 5px;
+  margin-top: auto;
+}
+
+.gallery-item-inner:hover .overlay-content {
+  transform: translateY(0);
+}
+
+.overlay-content h3 {
+  color: var(--white-1);
+  font-size: var(--fs-5);
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.overlay-content p {
+  color: var(--light-gray-70);
+  font-size: var(--fs-7);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.overlay-actions {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-item-inner:hover .overlay-actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--eerie-black-1);
+  color: var(--orange-yellow-crayola);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: var(--transition-1);
+}
+
+.action-btn:hover {
+  background: var(--orange-yellow-crayola);
+  color: var(--eerie-black-1);
+}
+
+/* Screenshot Info */
+.screenshot-info {
+  padding: 12px;
+}
+
+.screenshot-title {
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  transition: color var(--transition-1);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gallery-item-inner:hover .screenshot-title {
+  color: var(--orange-yellow-crayola);
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 0%, 0.9);
+  z-index: 30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.lightbox-modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 85%;
+  max-height: 85%;
+  margin: auto;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  background: var(--eerie-black-1);
+  color: var(--white-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 31;
+  transition: var(--transition-1);
+}
+
+.lightbox-close:hover {
+  background: var(--bittersweet-shimmer);
+}
+
+.lightbox-img-wrapper {
+  overflow: hidden;
+  border-radius: 14px;
+  background: var(--eerie-black-1);
+  box-shadow: var(--shadow-3);
+}
+
+.lightbox-img-wrapper img {
+  max-width: 100%;
+  max-height: 80vh;
+  display: block;
+  margin: auto;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  object-fit: contain; /* Pastikan gambar tidak terlalu besar */
+}
+
+.lightbox-img-wrapper img.fade {
+  opacity: 0.5;
+}
+
+.lightbox-caption {
+  color: var(--white-1);
+  text-align: center;
+  padding: 15px 0;
+  font-size: var(--fs-5);
+  font-weight: var(--fw-500);
+  width: 100%;
+}
+
+.lightbox-controls {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 31;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  width: 48px;
+  height: 48px;
+  background: var(--eerie-black-1);
+  color: var(--white-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  transition: var(--transition-1);
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: var(--orange-yellow-crayola);
+  color: var(--eerie-black-1);
+}
+
+/* Animasi filter active */
+.filter-btn.active {
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--orange-yellow-crayola);
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+/* Meningkatkan visual feedback pada filter button */
+.filter-btn.pulse {
+  animation: pulse 0.4s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); box-shadow: 0 0 8px rgba(252, 176, 69, 0.6); }
+  100% { transform: scale(1); }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-item {
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: calc(0.1s * var(--delay));
+}
+
+/* Indikator loading yang lebih halus */
+.gallery-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin: 20px 0;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--jet);
+  border-top: 3px solid var(--orange-yellow-crayola);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Menambahkan efek visual untuk loading state */
+.gallery-grid.loading {
+  opacity: 0.8;
+  pointer-events: none; /* Mencegah interaksi saat loading */
+}
+
+/* Fade-in animation for the gallery items */
+.screenshot-gallery {
+  opacity: 0;
+  animation: sectionFadeIn 0.8s ease forwards;
+}
+
+@keyframes sectionFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Adjustments - Sesuai permintaan */
+/* Tablet: 3 kolom */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile: 2 kolom */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 12px;
+  }
+  
+  .screenshot-wrapper {
+    /* Tetap mempertahankan aspect ratio 9:16 */
+    aspect-ratio: 9 / 16;
+  }
+  
+  .overlay-content h3 {
+    font-size: var(--fs-6);
+  }
+  
+  .overlay-content p {
+    font-size: var(--fs-8);
+    -webkit-line-clamp: 1; /* Limit to just one line on mobile */
+  }
+  
+  .action-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+/* Filter horizontal scrollable pada mobile */
+@media (max-width: 768px) {
+  .filter-wrapper {
+    overflow-x: auto;
+    padding-bottom: 10px;
+    justify-content: flex-start;
+    scrollbar-width: thin;
+    scrollbar-color: var(--orange-yellow-crayola) var(--eerie-black-1);
+    white-space: nowrap;
+  }
+  
+  .filter-wrapper::-webkit-scrollbar {
+    height: 5px;
+  }
+  
+  .filter-wrapper::-webkit-scrollbar-track {
+    background: var(--eerie-black-1);
+    border-radius: 5px;
+  }
+  
+  .filter-wrapper::-webkit-scrollbar-thumb {
+    background: var(--orange-yellow-crayola);
+    border-radius: 5px;
+  }
+  
+  .filter-btn {
+    flex: 0 0 auto;
+  }
+}
+
+/* Khusus perangkat dengan layar sangat kecil */
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+
+  .screenshot-wrapper {
+    /* Mengubah aspect ratio agar tidak terlalu tinggi di mobile */
+    aspect-ratio: 2 / 3;
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  .lightbox-content {
+    max-width: 95%;
+  }
+  
+  .lightbox-controls {
+    bottom: -70px;
+  }
+  
+  .lightbox-prev,
+  .lightbox-next {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Indikator swipe untuk mobile */
+  .lightbox-modal::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--orange-yellow-crayola);
+    border-radius: 2px;
+    opacity: 0.7;
+  }
+}
+
+.play-store-section {
+      margin: 30px 0;
+      text-align: left;
+    }
+    
+    .play-store-btn {
+      display: inline-flex;
+      align-items: left;
+      background: var(--bg-gradient-jet);
+      color: var(--white-1);
+      padding: 10px 20px;
+      border-radius: 12px;
+      border: 1px solid var(--jet);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-2);
+    }
+    
+    .play-store-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border-color: var(--orange-yellow-crayola);
+    }
+    
+    .play-store-btn:active {
+      transform: translateY(1px);
+    }
+    
+    .play-store-btn .icon {
+      font-size: 24px;
+      margin-right: 10px;
+      color: var(--orange-yellow-crayola);
+    }
+    
+    .play-store-btn .text {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+    
+    .play-store-btn .small-text {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+    
+    .play-store-btn .big-text {
+      font-size: 16px;
+      font-weight: var(--fw-600);
+    }
+    
+    @media (max-width: 480px) {
+      .play-store-btn {
+        padding: 10px 20px;
+      }
+      
+      .play-store-btn .icon {
+        font-size: 20px;
+      }
+      
+      .play-store-btn .small-text {
+        font-size: 10px;
+      }
+      
+      .play-store-btn .big-text {
+        font-size: 14px;
+      }
+    }
